@@ -170,7 +170,6 @@ return (
               <div className="column is-10">
               {results[results.length-1] && filtered && filtered.length>0?
               <>
-               <h2 className="headline">{`Synonyms for the word ${results[results.length-1]} are:`}</h2>
                 {/* <div id="spinner">
                   <Image
                   className="spinner icon"
@@ -181,6 +180,9 @@ return (
                 />
               </div> */}
                 <div className="inner" id="list">
+                <h2 className="headline">{`Synonyms for the word ${results[results.length-1]} are:`}</h2>
+                <div className="synonim-container">
+
                  {/* {sorted ? sorted.map(i => {
                   return(
                     <p>{i}</p>
@@ -191,6 +193,7 @@ return (
                     <p>{i}</p>
                   )
                  }):''}
+                 </div>
                 </div></>
                :<h2 className="headline">{`There is no synonyms for the word ${results[results.length-1]}.`}</h2>}
               </div>

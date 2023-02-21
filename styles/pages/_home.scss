@@ -305,8 +305,11 @@
 
   }
   .inner{
-    display: flex;
-    gap: 0.5rem;
+    .synonym-container{
+      display: flex;
+      gap: 0.5rem;
+    }
+   
     padding: 1rem;
     border-radius: 8px;
     background: rgba(46,17,66,0.4);
