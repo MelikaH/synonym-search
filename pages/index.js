@@ -181,7 +181,7 @@ return (
               </div> */}
                 <div className="inner" id="list">
                 <h2 className="headline">{`Synonyms for the word ${results[results.length-1]} are:`}</h2>
-                <div className="synonim-container">
+                <div className="synonym-container">
 
                  {/* {sorted ? sorted.map(i => {
                   return(
