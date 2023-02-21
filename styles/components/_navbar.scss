@@ -1,0 +1,29 @@
+.navbar{
+    margin: 1rem;
+    background: black;
+    .navbar-item{
+        img{
+            max-height:5rem;
+            object-fit: cover;
+        }
+        
+    }
+    .navbar-start{
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        a{
+            letter-spacing: 2px;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                letter-spacing: 2.5px;
+                color: rgb(126, 80, 163);
+            }
+            &.is-active{
+                color: rgb(126, 80, 163);
+
+            }
+        }
+        
+    }
+}
