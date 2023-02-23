@@ -214,9 +214,19 @@
     margin-bottom: 0.5rem;
   }
 
+ .with_input{
+  padding-top: 0;
   .center {
-    padding: 8rem 0 6rem;
+    padding: 0;
+    .content{
+      padding: 1rem;
+      margin-bottom: 0!important;
+    }
   }
+}
+  .synonyms-block{
+  padding-top: 1rem;
+}
 
   .center::before {
     transform: none;
