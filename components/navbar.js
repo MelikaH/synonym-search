@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
@@ -11,19 +11,23 @@ export default function Navbar(props) {
   const setHelp = props.setHelpTab;
   const vocabulary = props.vocabularyTab;
   const setVocabulary = props.setVocabularyTab;
-  console.log("help:",help);
+  const [menu, setMenu] = useState(false);
+
   const handleHelp = () => {
     setVocabulary(false);
     setHelp(true);
+    setMenu(false);
   }
   const handleVocabulary = () => {
     setVocabulary(true);
     setHelp(false);
+    setMenu(false);
   }
 
   const handleHome = () => {
     setVocabulary(false);
     setHelp(false);
+    setMenu(false);
   }
   return (
     <>
@@ -40,14 +44,14 @@ export default function Navbar(props) {
             />
           </a>
 
-          <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" onClick={()=>setMenu(!menu)}>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
 
-        <div id="navbarBasicExample" className="navbar-menu">
+        <div id="navbarBasicExample" className={`navbar-menu ${menu?"is-active":''}`}>
           <div className="navbar-start">
             <Link href="#help" as='/' passHref legacyBehavior>
               <a className={`navlink ${help ? "is-active" : ""} `} onClick={() => handleHelp()}>Help Desk</a>
